@@ -73,7 +73,7 @@ borram9 (x:xs) = if ((mod0 x 9) == 0) then borram9 xs
 borraMenorMayor lista = let 
                             men = menor lista
                             may = mayor lista
-                            lista 1 = borraNum lista men
+                            lista1 = borraNum lista men
                             resultado = borranum lista1 may
                         in
                             resultado
@@ -95,12 +95,12 @@ borraNum (x:xs) num = if (x == num) then borraNum xs x
 
 
 --Proceso para ordenar una lista
-ordena [] = []
-ordena (x:xs) = let 
-                    m = mimenor (x:xs)
-                    la = quitax (x:xs)
-
-                in
+--ordena [] = []
+--ordena (x:xs) = let 
+--                    m = mimenor (x:xs)
+  --                  la = quitax (x:xs)
+--
+  --              in
 
 quitax [] e = []
 quitax (x:xs) e = if(e == x) then xs
@@ -110,6 +110,9 @@ mimenor (x:xs) = menn (x:xs) x
 men [] v = v
 men (x:xs) v = if (v <= x) then men xs v
                     else xs x
+
+
+--Dada una frase regresar su valor en ordinal (numeros)
 
 
 --Funcion de modulo
